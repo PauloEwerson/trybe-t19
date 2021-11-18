@@ -1,3 +1,5 @@
+![Trybe](https://github.com/PauloEwerson/trybe-t19/blob/main/option/imgs/background-trybe.png?raw=true/1500x500)
+
 # Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Ewerson Martins](https://www.linkedin.com/in/ewerson-martins-5a3143b6/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
