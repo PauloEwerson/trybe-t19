@@ -3,7 +3,7 @@ const b = 50;
 const c = 80;
 
 if (a + b + c === 180){
-  console.log('Formou um triângulo.');
+  console.log(true, 'Formou um triângulo.');
 } else {
-  console.log('Não formou um triângulo.');
+  console.log(false, 'Não formou um triângulo.');
 }
