@@ -6,7 +6,9 @@ for (let i = 1; i <= 25; i += 1) {
   numbers.push(i);
 }
 /* //////////////////////////////// */
+
+let total = [];
 for (let index = 0; index < numbers.length; index += 1) {
-  let total = numbers[index] / 2;
-  console.log(total);
+  total.push(numbers[index] / 2);
 }
+console.log(total);
