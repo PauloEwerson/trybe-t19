@@ -86,6 +86,14 @@
       capitalText.innerHTML = capitalText.innerHTML.toUpperCase();
     }
     changeCapitalText();
+
+    function showInConsole() {
+      let showConsole = document.getElementsByClassName("center-content");
+      for (let i = 0; i < showConsole.length; i += 1) {
+        console.log(showConsole[i].innerHTML);
+      }
+    }
+    showInConsole();
   </script>
 </body>
 
