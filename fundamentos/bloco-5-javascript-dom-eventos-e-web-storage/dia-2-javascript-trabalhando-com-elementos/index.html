@@ -54,7 +54,18 @@
     image.className = 'small-image';
     leftContent.appendChild(image);
     
-    // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista.Essa lista deve ser filha do section criado no passo 6;
+    // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, 
+    // ou seja, um, dois, três, ... como valores da lista.
+    // Essa lista deve ser filha do section criado no passo 6;
+    
+    const ulist = document.createElement('ul');
+    rightContent.appendChild(ulist);
+    const arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    for (let num in arrayNumbers) {
+      const liList = document.createElement('li');
+      liList.innerHTML = arrayNumbers[num];
+      ulist.appendChild(liList);
+    }
     // 9 - Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
   </script>
 </body>
