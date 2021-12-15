@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Exercício 5.2</title>
+</head>
+
+<body>
+  <script>
+    // 1 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+
+    const titulo = document.createElement('h1');
+    titulo.innerText = 'Exercício 5.2 - JavaScript DOM';
+    document.body.appendChild(titulo);
+
+    // 2 - Adicione a tag main com a classe main - content como filho da tag body;
+
+    const main = document.createElement('main');
+    main.className = 'main-content';
+    document.body.appendChild(main);
+
+    // 3 - Adicione a tag section com a classe center - content como filho da tag main criada no passo 2;
+
+    const section = document.createElement('section');
+    section.className = 'center-content';
+    main.appendChild(section);
+
+    // 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+
+    const tagP = document.createElement('p');
+    tagP.innerHTML = 'Resolução do exercicio do requesito 04';
+    section.appendChild(tagP);
+
+    // 5 - Adicione a tag section com a classe left - content como filho da tag main criada no passo 2;
+
+    const leftContent = document.createElement('section');
+    leftContent.className = 'left-content';
+    main.appendChild(leftContent);
+
+    // 6 - Adicione a tag section com a classe right - content como filho da tag main criada no passo 2;
+
+    const rightContent = document.createElement('section');
+    rightContent.className = 'right-content';
+    main.appendChild(rightContent);
+
+    // 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . 
+    // Esse elemento deve ser filho do section criado no passo 5;
+
+    const image = document.createElement('img');
+    image.src = 'https://picsum.photos/200';
+    image.className = 'small-image';
+    leftContent.appendChild(image);
+
+    // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, 
+    // ou seja, um, dois, três, ... como valores da lista.
+    // Essa lista deve ser filha do section criado no passo 6;
+
+    const ulist = document.createElement('ul');
+    rightContent.appendChild(ulist);
+    const arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    for (let num in arrayNumbers) {
+      const liList = document.createElement('li');
+      liList.innerHTML = arrayNumbers[num];
+      ulist.appendChild(liList);
+    }
+    // 9 - Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+
+    for (let index = 1; index <= 3; index += 1) {
+      const elementH3 = document.createElement('h3');
+      elementH3.innerHTML = 'Show ' + index;
+      main.appendChild(elementH3);
+    }
+
+    // PARTE 02
+
+    // 01 Adicione a classe title na tag h1 criada;
+    titulo.className = 'title';
+
+    // 02 - Adicione a classe description nas 3 tags h3 criadas;
+    const elementH3 = document.getElementsByTagName('h3');
+    for (let i = 0; i < 3; i += 1) {
+      elementH3[i].className = 'description';
+    }
+
+    // 03 - Remova a section criado no passo 5 
+    // (aquele que possui a classe left-content ). 
+    // Utilize a função .removeChild() ;
+    const sectionLeftContent = document.getElementsByClassName('left-content')[0];
+    main.removeChild(sectionLeftContent);
+
+    // 04 - Centralize a section criado no passo 6 
+    // (aquele que possui a classe right-content ). 
+    // Dica: para centralizar, basta configurar o margin-right: auto da section ;
+    rightContent.style.marginRight = 'auto';
+
+    // 05 - Troque a cor de fundo do elemento pai da section criada no passo 3 
+    // (aquela que possui a classe center-content ) 
+    // para a cor verde;
+
+    const sectionCenterContent = document.getElementsByClassName('center-content')[0];
+    sectionCenterContent.parentNode.style.backgroundColor = 'green';
+
+  </script>
+</body>
+
+</html>
