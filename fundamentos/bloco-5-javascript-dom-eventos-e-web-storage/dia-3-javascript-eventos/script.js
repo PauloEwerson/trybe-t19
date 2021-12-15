@@ -138,3 +138,14 @@ function newTaskSpan(task) {
 };
 
 newTaskSpan('Projeto:');
+
+// REQUESITO 08
+function addLegend(color) {
+  let taskElement = document.querySelector('.my-tasks');
+  let element = document.createElement('div');
+  element.className = 'task';
+
+  element.style.backgroundColor = color;
+  taskElement.appendChild(element);
+}
+addLegend('red');
