@@ -13,7 +13,7 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-// Escreva seu código abaixo.
+// REQUESITO 01
 
 let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
@@ -24,11 +24,11 @@ function createDaysOfTheMonth() {
     let day = dezDaysList[index];
     let dayItem = document.createElement('li');
 
-    if (day === 24 | day === 31) {
+    if (day === 24 || day === 31) {
       dayItem.className = 'day holiday';
       dayItem.innerHTML = day;
       getDaysList.appendChild(dayItem);
-    } else if (day === 4 | day === 11 | day === 18) {
+    } else if (day === 4 || day === 11 || day === 18) {
       dayItem.className = 'day friday';
       dayItem.innerHTML = day;
       getDaysList.appendChild(dayItem);
@@ -44,3 +44,34 @@ function createDaysOfTheMonth() {
   };
 };
 createDaysOfTheMonth();
+
+// REQUESITO 02
+function holidayButton(buttonName) {
+  const divButton = document.querySelector('.buttons-container'); // onde adiciona
+  const button = document.createElement('button'); // o que adiciona
+  button.id = 'btn-holiday'; // quem é
+  button.innerHTML = buttonName;
+
+  divButton.appendChild(button); // onde e oque adiciona
+}
+holidayButton('Feriados');
+
+// REQUESITO 03
+function displayHolidays() {
+  let getHolidayButton = document.querySelector('#btn-holiday');
+  let getHolidays = document.querySelectorAll('.holiday')
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
+
+  getHolidayButton.addEventListener('click', function() {
+    for (let index = 0; index < getHolidays.length; index += 1) {
+      if (getHolidays[index].style.backgroundColor === setNewColor) {
+        getHolidays[index].style.backgroundColor = backgroundColor;
+      } else {
+        getHolidays[index].style.backgroundColor = setNewColor;
+      }
+    }
+  })
+};
+
+displayHolidays();
