@@ -185,3 +185,34 @@ function setDayColor() {
 };
 
 setDayColor();
+
+// REQUESITO BONUS
+function addNewTask() {
+  let getInputField = document.querySelector('#task-input'); // input
+  let addInputButton = document.querySelector('#btn-add'); // botão adicionar
+  let getTaskList = document.querySelector('.task-list'); // lista ul
+
+  addInputButton.addEventListener('click', function() { // Ao clicar no botão ADICIONAR:
+    if (getInputField.value.length > 0) { // se algo for digitado no input...
+      let newLi = document.createElement('li'); // cria elemento 'li'
+      newLi.innerText = getInputField.value; // recebe o que foi digitado como valor, e adiciona como texto à 'li'
+
+      getTaskList.appendChild(newLi); // adiciona a 'li' criada (newLi) como filho da 'ul' (getTaskList)
+      getInputField.value = ''; // torna o input vazio.
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event) { // Ao pressionar ENTER:
+    if (event.key === 'Enter' && getInputField.value.length > 0) { // se o enter for pressionado E o input conter algum conteúdo...
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+};
+
+addNewTask();
