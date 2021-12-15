@@ -63,7 +63,7 @@ function displayHolidays() {
   let backgroundColor = 'rgb(238,238,238)';
   let setNewColor = 'white';
 
-  getHolidayButton.addEventListener('click', function() {
+  getHolidayButton.addEventListener('click', function () {
     for (let index = 0; index < getHolidays.length; index += 1) {
       if (getHolidays[index].style.backgroundColor === setNewColor) {
         getHolidays[index].style.backgroundColor = backgroundColor;
@@ -73,5 +73,14 @@ function displayHolidays() {
     }
   })
 };
-
 displayHolidays();
+
+// REQUESITO 04
+function buttonFriday(buttonName) {
+  let getDivButtonsContainer = document.querySelector('.buttons-container'); // recebe os botoes com a classe .buttons-container
+  let buttonFriday = document.createElement('button'); // cria o botão
+  buttonFriday.id = 'btn-friday'; // identifica
+  buttonFriday.innerHTML = buttonName; // recebe o argumento passado por parametro da função
+  getDivButtonsContainer.appendChild(buttonFriday); // atribui o botão criado (buttonFriday) como filho da div (getDivButtonsContainer).
+};
+buttonFriday('Sexta-feira');
