@@ -91,25 +91,25 @@ function displayFridays(fridaysArray) {
   let fridays = document.getElementsByClassName('friday');
   let newFridayText = 'SEXTOU o/';
 
-  getFridayButton.addEventListener('click', function() {
-  for (let index = 0; index < fridays.length; index += 1) {
-    if (fridays[index].innerHTML !== newFridayText) {
+  getFridayButton.addEventListener('click', function () {
+    for (let index = 0; index < fridays.length; index += 1) {
+      if (fridays[index].innerHTML !== newFridayText) {
         fridays[index].innerHTML = newFridayText;
-    } else {
+      } else {
         fridays[index].innerHTML = fridaysArray[index];
       }
     }
   })
 };
 
-let dezFridays = [ 4, 11, 18, 25 ];
+let dezFridays = [4, 11, 18, 25];
 displayFridays(dezFridays);
 
 // REQUESITO 06
 function dayMouseOver() {
   let days = document.querySelector('#days');
 
-  days.addEventListener('mouseover', function(event) {
+  days.addEventListener('mouseover', function (event) {
     event.target.style.fontSize = '30px';
     event.target.style.fontWeight = '600';
   })
@@ -118,7 +118,7 @@ function dayMouseOver() {
 function dayMouseOut() {
   let days = document.querySelector('#days');
 
-  days.addEventListener('mouseout', function(event) {
+  days.addEventListener('mouseout', function (event) {
     event.target.style.fontWeight = '200';
     event.target.style.fontSize = '20px';
   })
@@ -126,3 +126,15 @@ function dayMouseOut() {
 
 dayMouseOver();
 dayMouseOut();
+
+// REQUESITO 07
+function newTaskSpan(task) {
+
+  let tasksContainer = document.querySelector('.my-tasks');
+  let taskName = document.createElement('span');
+
+  taskName.innerHTML = task;
+  tasksContainer.appendChild(taskName);
+};
+
+newTaskSpan('Projeto:');
