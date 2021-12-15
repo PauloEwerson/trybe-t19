@@ -149,3 +149,19 @@ function addLegend(color) {
   taskElement.appendChild(element);
 }
 addLegend('red');
+
+// REQUESITO 09
+function setTaskClass() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
+
+  myTasks.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+
+setTaskClass();
