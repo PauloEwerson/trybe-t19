@@ -15,17 +15,32 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
+let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
 function createDaysOfTheMonth() {
-  const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  const monthDaysList = document.querySelector('#days');
+  let getDaysList = document.querySelector('#days');
 
-  for (let i = 0; i < dezDaysList.length; i += 1) {
-    const monthDays = dezDaysList[i];
-    const monthDaysListItem = document.createElement('li');
-    monthDaysListItem.innerText = monthDays;
-    monthDaysListItem.className = 'day';
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    let day = dezDaysList[index];
+    let dayItem = document.createElement('li');
 
-    monthDaysList.appendChild(monthDaysListItem);
+    if (day === 24 | day === 31) {
+      dayItem.className = 'day holiday';
+      dayItem.innerHTML = day;
+      getDaysList.appendChild(dayItem);
+    } else if (day === 4 | day === 11 | day === 18) {
+      dayItem.className = 'day friday';
+      dayItem.innerHTML = day;
+      getDaysList.appendChild(dayItem);
+    } else if (day === 25) {
+      dayItem.className = 'day holiday friday';
+      dayItem.innerHTML = day;
+      getDaysList.appendChild(dayItem);
+    } else {
+      dayItem.innerHTML = day;
+      dayItem.className = 'day';
+      getDaysList.appendChild(dayItem);
+    }
   };
 };
 createDaysOfTheMonth();
