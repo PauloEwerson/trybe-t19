@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário Curriculo</title>
+</head>
+
+<body>
+  <h1>Formulário para envio de currículo</h1>
+
+  <form action="" method="get" class="">
+
+    <fieldset class="">
+      <div class="">
+        <label>Nome Completo: </label>
+        <input type="text" name="full-name" id="full-name" maxlength="40" required>
+      </div>
+
+      <div class="">
+        <label>Email: </label>
+        <input type="text" name="email" id="personal-email" placeholder="nome@exemplo.com" maxlength="50" required>
+      </div>
+
+      <div class="">
+        <label>CPF: </label>
+        <input type="text" name="cpf" id="cpf" maxlength="11" required>
+      </div>
+
+      <div class="">
+        <label>Cidade: </label>
+        <input type="text" name="city" id="city" maxlength="28" required>
+      </div>
+
+      <div class="">
+        <label>Estado: </label>
+        <select id="state" name="state" required>
+          <option>Selecione</option>
+        </select>
+      </div>
+
+      <div class="">
+        <label>Tipo: </label>
+        <input type="radio" name="place-type" id="home-type-1" value="home">
+        <label for="home-type-1">Casa</label>
+        <input type="radio" name="place-type" id="home-type-2" value="apartment">
+        <label for="home-type-2">Apartamento</label>
+      </div>
+    </fieldset>
+
+
+    <!-- Crie outro <fieldset> para dados do seu último emprego -->
+
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
