@@ -2,8 +2,9 @@
   "name": "dia-1-introducao-ao-redux-o-estado-global-da-aplicacao",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
+    "start": "index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
